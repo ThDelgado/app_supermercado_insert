@@ -5,7 +5,7 @@ evaluacion
 m7_s9
 
 Para clonar:
-
+https://github.com/ThDelgado/app_supermercado_insert.git
 
 
 Thelma Delgado
