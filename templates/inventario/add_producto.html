@@ -1,0 +1,36 @@
+{% extends "layouts/master.html" %}
+
+{% block vista %}Productos{% endblock %}
+
+{% block contenido %}
+    <header>
+        <h2 class="text-center" >Agregar productos</h2>
+    </header>
+    <main class="container">
+        <section >
+        <h2 class="text-center py-3" >Formulario modelform </h2>
+            <main class="container">
+                <section >
+                    <div class="row justify-content-center"> 
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <form action="" method="post"> <!--agregamos method, para definir POS/GET, colocar certificado-->
+                                {% csrf_token %}
+                                <div>
+                                    {{form.as_p}} <!-- nombre con que enviamos el formulario-->
+                                </div>
+                                <div class ="py-3">
+                                    <input type="submit" value="Registrar producto" class="btn btn-primary">
+                                </div>
+                            </form>
+                          
+                        </div> 
+                    </div>   
+                </section>
+            </main> 
+        
+        </section>
+        
+    </main>
+    
+{% endblock %}
+

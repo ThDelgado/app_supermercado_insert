@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: linear-gradient(135deg, #00c6ff, #063978);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+
+
+
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+
+
+
+#listado_clubs img {
+    aspect-ratio: 3/2;
+    width: 200px;
+}
+
+/* Estilos para visior de mensajes */
+
+.alert {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    color: #fff;
+    
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-danger {
+    background-color: #dc3545;
+}
+
+
+.alert.alert-error.alert-dismissible{
+    background-color: #d6e80d !important;
+}
+
+.btn-close:hover {
+    color: #0056b3;
+    /* Color al pasar el ratón */
+}

@@ -1,0 +1,49 @@
+{% extends "layouts/master.html" %}
+
+
+{% block contenido %}
+
+{% load filtros_productos_extras %}    
+
+<header class="py-3">
+    <h1 class="text-center ">Listado Productos </h1>
+</header>
+
+<main class="container">
+	<section id= "mi-listado">
+	    {% if  productos  %}
+           
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Fabrica</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Vencimiento</th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in productos  %}
+                        <tr>
+                            <td>{{producto.fabrica}}</td>
+                            <td>{{producto.nombre}}</td>
+                            <td>{{producto.descripcion}}</td>
+                            <td>{{producto.precio|currency}}</td>
+                            <td>{{producto.f_vencimiento}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+	    {% else %}
+	        <p class="text-center">No existen productos disponibles</p>
+	    {% endif %}
+	</section>
+    <div>
+         <a class="btn btn-success" href="{% url "add_producto" %}">Agregar producto</a>
+    </div>
+ </main>
+
+{% endblock %}    
+
